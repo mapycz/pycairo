@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+#export DH_VERBOSE=1
+
+export PYBUILD_DESTDIR_python2=debian/szn-python-cairo/
+export PYBUILD_DESTDIR_python3=debian/szn-python3-cairo/
+
+export PKG_CONFIG_PATH=/opt/szn/cairo/lib/x86_64-linux-gnu/pkgconfig
+export LDFLAGS=-Wl,-rpath=/opt/szn/cairo/lib/x86_64-linux-gnu
+
+%:
+	dh $@ --with python2,python3 --buildsystem=pybuild
+
+override_dh_auto_test:
+	./setup.py test

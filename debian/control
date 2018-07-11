@@ -1,0 +1,32 @@
+Source: szn-python-cairo
+Maintainer: Jiri Drbalek <jiri.drbalek@firma.seznam.cz>
+X-Python-Version: >= 2.7
+Standards-Version: 3.9.6.0
+Section: libs
+Priority: extra
+Build-Depends: debhelper (>= 8),
+    dh-python,
+    python-all, python3-all,
+    python-setuptools, python3-setuptools,
+    python-pytest, python3-pytest,
+    szn-libcairo
+
+Package: szn-python-cairo
+Architecture: amd64
+Conflicts: python-cairo
+Replaces: python-cairo
+Depends: ${python:Depends}, ${misc:Depends},
+    szn-libcairo
+Description: Python libcairo wrapper
+ Pycairo is a Python module providing bindings
+ for the `cairo graphics library.
+
+Package: szn-python3-cairo
+Architecture: amd64
+Conflicts: python3-cairo
+Replaces: python3-cairo
+Depends: ${python3:Depends}, ${misc:Depends},
+    szn-libcairo
+Description: Python libcairo wrapper
+ Pycairo is a Python module providing bindings
+ for the `cairo graphics library.
