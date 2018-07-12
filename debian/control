@@ -13,8 +13,8 @@ Build-Depends: debhelper (>= 8),
 
 Package: szn-python-cairo
 Architecture: amd64
-Conflicts: python-cairo
-Replaces: python-cairo
+Conflicts: python-cairo, python-cairo-dev
+Replaces: python-cairo, python-cairo-dev
 Depends: ${python:Depends}, ${misc:Depends},
     szn-libcairo
 Description: Python libcairo wrapper
@@ -23,8 +23,8 @@ Description: Python libcairo wrapper
 
 Package: szn-python3-cairo
 Architecture: amd64
-Conflicts: python3-cairo
-Replaces: python3-cairo
+Conflicts: python3-cairo, python3-cairo-dev
+Replaces: python3-cairo, python3-cairo-dev
 Depends: ${python3:Depends}, ${misc:Depends},
     szn-libcairo
 Description: Python libcairo wrapper
