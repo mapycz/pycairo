@@ -5,10 +5,11 @@ Standards-Version: 3.9.6.0
 Section: libs
 Priority: extra
 Build-Depends: debhelper (>= 8),
-    dh-python,
+    dh-python, pkg-config,
     python-all, python3-all,
     python-setuptools, python3-setuptools,
     python-pytest, python3-pytest,
+    python-gobject-2-dev, libpixman-1-dev,
     szn-libcairo
 
 Package: szn-python-cairo
